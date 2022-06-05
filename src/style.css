@@ -3,6 +3,7 @@
 *::before,*::after{box-sizing: border-box;}
 *{padding: 0;margin: 0;}
 ul,ol{list-style: none;}
+a{color: inherit; text-decoration: none;}
 
 /* style */
 body{
@@ -12,16 +13,24 @@ body{
     background-size: cover;
 }
 
+/* icon */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 /* 头部start */
 
-.globalHeader > .search{
+.globalHeader .search{
     /* border: 1px solid red; */
     margin: 50px 30px 8px 30px;
     display: flex;
     justify-content:center
 
 }
-.globalHeader > .search > input{
+.globalHeader  .search > input{
     height: 40px;
     width: 300px;
     border: none;
@@ -35,7 +44,7 @@ body{
     color: #666;
 }
 
-.globalHeader > .search > button{
+.globalHeader  .search > button{
     width: 72px;
     height: 40px;
     border: none;
@@ -46,6 +55,7 @@ body{
     line-height: 40px;
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
 }
 
 .globalHeader > .engineList > ul{
@@ -80,7 +90,13 @@ body{
     justify-content:center;
     padding: 20px 0 0 0;
 }
-.globalMain > .content-title > .add{
+
+.globalMain > .content-title a:hover{
+    color: #4F9FE9;
+    box-shadow: 0px 0px 5px #4F9FE9;
+}
+
+.globalMain > .content-title .add{
     height: 40px;
     width: 345px;
     background-color: #fff;
@@ -89,9 +105,7 @@ body{
     line-height: 40px;
     text-align: center;
     border-radius: 8px;
-    cursor: pointer;
 }
-
 
 .globalMain > .website ul{
     padding: 15px 20px 0 20px;
@@ -106,17 +120,23 @@ body{
     margin: 0 15px 15px 15px;
 }
 
-.globalMain > .website li > .site{
+.globalMain > .website li > .site a{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
     height: 72px;
-    background: #fff;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     cursor: pointer;
 }
+.globalMain > .website li > .site a:hover{
+    color: #4F9FE9;
+    box-shadow: 0px 0px 5px #4F9FE9;
+}
 
-.globalMain > .website li > .site > .logo{
+.globalMain > .website li > .site .logo{
     width: 48px;
     height: 48px;
     background-color: #f1f1f1;
@@ -127,16 +147,27 @@ body{
     /* margin-right: 20px; */
 }
 
-.globalMain > .website li > .site > .logo > img{
+.globalMain > .website li > .site .logo > img{
     width: 30px;
     height: 30px;
 }
 
-.globalMain > .website li > .site > .detail{
-    width: 160px;
+.globalMain > .website li > .site .detail{
+    width: 180px;
 }
 
-.globalMain > .website li > .site > .delete{
+.globalMain > .website li > .site .site-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.globalMain > .website li > .site .url{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.globalMain > .website li > .site .delete{
     border: none;
     background: #F25F5F;
     padding: 0 10px;
@@ -151,4 +182,5 @@ body{
 .globalMain > .website li > .site:hover .delete{
     opacity: 1;
 }
+
 /* 主体end */

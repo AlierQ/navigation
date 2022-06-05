@@ -9,10 +9,12 @@
 </head>
 <body>
     <header class="globalHeader">
-        <div class="search">
-            <input type="text">
-            <button>搜索</button>
-        </div>
+        <form id="searchForm" action="https://www.baidu.com/s?wd=" method="get">
+            <div class="search">
+                <input name="wd" type="text">
+                <button type="submit">搜索</button>
+            </div>
+        </form>
         <div class="engineList">
             <ul>
                 <li class="engine"><a class="checked" href="">百度</a></li>
@@ -24,99 +26,95 @@
     </header>
     <main class="globalMain">
         <div class="content-title">
-            <div class="add">+</div>
+            <a href="">
+                <div class="add">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-add"></use>
+                    </svg>
+                </div>
+            </a>
         </div>
         <div class="website">
             <ul>
                 <li>
                     <div class="site">
-                        <div class="logo">
-                            <img src="baidufavicon.ico" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">百度一下，你就知道</div>
-                            <div class="url">www.baidu.com</div>
-                        </div>
-                        <div class="delete" >
-                            删除
-                        </div>
+                        <a href="http://www.baidu.com">
+                            <div class="logo">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="detail">
+                                <div class="site-title"></div>
+                                <div class="url">www.baidu.com</div>
+                            </div>
+                            <div class="delete">删除</div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="site">
-                        <div class="logo">
-                            <img src="xinlangfavicon.svg" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">新浪</div>
-                            <div class="url">www.sina.com</div>
-                        </div><div class="delete">
-                            删除
-                        </div>
+                        <a href="https://www.sina.com.cn">
+                            <div class="logo">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="detail">
+                                <div class="site-title"></div>
+                                <div class="url">www.sina.com.cn</div>
+                            </div>
+                            <div class="delete">删除</div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="site">
-                        <div class="logo">
-                            <img src="baidufavicon.ico" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">百度一下，你就知道</div>
-                            <div class="url">www.baidu.com</div>
-                        </div>
-                        <div class="delete">
-                            删除
-                        </div>
+                        <a href="https://www.bilibili.com/">
+                            <div class="logo">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="detail">
+                                <div class="site-title">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</div>
+                                <div class="url">www.bilibili.com</div>
+                            </div>
+                            <div class="delete" >删除</div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="site">
-                        <div class="logo">
-                            <img src="xinlangfavicon.svg" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">新浪</div>
-                            <div class="url">www.sina.com</div>
-                        </div>
-                        <div class="delete">
-                            删除
-                        </div>
+                        <a href="https://www.zhihu.com/">
+                            <div class="logo">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="detail">
+                                <div class="site-title"></div>
+                                <div class="url">www.zhihu.com</div>
+                            </div>
+                            <div class="delete" >删除</div>
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div class="site">
-                        <div class="logo">
-                            <img src="baidufavicon.ico" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">百度一下，你就知道</div>
-                            <div class="url">www.baidu.com</div>
-                        </div>
-                        <div class="delete">
-                            删除
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="site">
-                        <div class="logo">
-                            <img src="xinlangfavicon.svg" alt="">
-                        </div>
-                        <div class="detail">
-                            <div class="site-title">新浪</div>
-                            <div class="url">www.sina.com</div>
-                        </div>
-                        <div class="delete">
-                            删除
-                        </div>
+                        <a href="https://www.qq.com/">
+                            <div class="logo">
+                                <img src="#" alt="">
+                            </div>
+                            <div class="detail">
+                                <div class="site-title"></div>
+                                <div class="url">www.qq.com</div>
+                            </div>
+                            <div class="delete" >删除</div>
+                        </a>
                     </div>
                 </li>
             </ul>
         </div>
     </main>
+    <div id="div"></div>
     <footer class="globalFooter">
 
     </footer>
 </body>
+<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js" type="application/javascript"></script>
+<script src="//at.alicdn.com/t/font_3449736_c40jzyn4jag.js"></script>
 <script src="main.js"></script>
 </html>
