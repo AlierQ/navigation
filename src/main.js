@@ -3,7 +3,23 @@ let start = 0;
 // 点击结束时间
 let end = 0;
 // 站点信息
-let hashMap = [{"logo":"//47.95.207.116:18002/api/v1/favicon?url=https://alierq.space/","title":"我的个人博客","url":"https://alierq.space/"},{"logo":"http://47.95.207.116:18002/api/v1/favicon?url=https://github.com/AlierQ","title":"我的GitHub主页","url":"https://github.com/AlierQ"},{"logo":"http://47.95.207.116:18002/api/v1/favicon?url=https://github.com/AlierQ/navigation","title":"Github导航项目地址","url":"https://github.com/AlierQ/navigation"}];
+let hashMap = [
+    {
+        "logo":"https://api.xinac.net/icon/?url=https://alierq.space/",
+        "title":"我的个人博客",
+        "url":"https://alierq.space/"
+    },
+    {
+        "logo":"https://api.xinac.net/icon/?url=https://github.com/AlierQ",
+        "title":"我的GitHub主页",
+        "url":"https://github.com/AlierQ"
+    },
+    {
+        "logo":"https://api.xinac.net/icon/?url=https://github.com/AlierQ/navigation",
+        "title":"Github导航项目地址",
+        "url":"https://github.com/AlierQ/navigation"
+    }
+];
 // 搜索前缀
 let searchUrl = 'https://www.baidu.com/s?wd=';
 // 搜索引擎列表
@@ -11,7 +27,7 @@ let searchList = {
     'baidu':'https://www.baidu.com/s?wd=',
     'zhihu':'https://www.zhihu.com/search?type=content&q=',
     'sougou':'https://www.sogou.com/web?query=',
-    'google':'https://www.baidu.com/s?wd=',
+    // 'google':'https://www.baidu.com/s?wd=',
     'bing':'https://cn.bing.com/search?q='
 };
 
@@ -160,7 +176,7 @@ $('.add').on('click',()=>{
         getTitleFavicon($a[0]);
         // 放入到站点集合中
         hashMap.push({
-            logo:'//47.95.207.116:18002/api/v1/favicon?url=' + url,
+            logo:'https://api.xinac.net/icon/?url=' + url,
             title:$newLi.find('.site-title')[0].textContent,
             url:url
         })
@@ -182,7 +198,7 @@ $('.add').on('click',()=>{
 // 调用api自动获取网页图标
 function getTitleFavicon(item){
     // 动态加载favicon
-    $(item).find('.logo img')[0].src = '//47.95.207.116:18002/api/v1/favicon?url=' + item.href;
+    $(item).find('.logo img')[0].src = 'https://api.xinac.net/icon/?url=' + item.href;
 }
 
 // 关闭页面存储hashMap
