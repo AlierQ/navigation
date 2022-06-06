@@ -1,0 +1,196 @@
+/* CSS reset */
+*{box-sizing: border-box;}
+*::before,*::after{box-sizing: border-box;}
+*{padding: 0;margin: 0;}
+ul,ol{list-style: none;}
+a{color: inherit; text-decoration: none;}
+
+/* style */
+body{
+    background: #eee url(backimg.e88ad276.jpg) no-repeat center center;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* icon */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* 头部start */
+
+.globalHeader .search{
+    /* border: 1px solid red; */
+    margin: 50px 30px 8px 30px;
+    display: flex;
+    justify-content:center
+
+}
+.globalHeader  .search > input{
+    height: 40px;
+    width: 300px;
+    border: none;
+    border: 2px solid #4F9FE9;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    float: left;
+    outline: 0;
+    text-indent: 12px;
+    font-size: 18px;
+    color: #666;
+}
+
+.globalHeader  .search > button{
+    width: 72px;
+    height: 40px;
+    border: none;
+    background-color: #4F9FE9;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.globalHeader > .engineList > ul{
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+} 
+
+.globalHeader > .engineList > ul > li > a{
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #fff;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 26px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+}
+
+.checked{
+    background-color: #4F9FE9 !important;
+    color: #fff !important;
+}
+
+/* 头部end */
+
+/* 主体start */
+.globalMain > .content-title{
+    display: flex;
+    justify-content:center;
+    padding: 20px 0 0 0;
+}
+
+.globalMain > .content-title a:hover{
+    color: #4F9FE9;
+    box-shadow: 0px 0px 5px #4F9FE9;
+}
+
+.globalMain > .content-title .add{
+    height: 40px;
+    width: 345px;
+    background-color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.globalMain > .website ul{
+    padding: 15px 20px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.globalMain > .website li{
+    width: 350px;
+    height: 72px;
+    margin: 0 15px 15px 15px;
+}
+
+.globalMain > .website li > .site a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    height: 72px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.globalMain > .website li > .site a:hover{
+    color: #4F9FE9;
+    box-shadow: 0px 0px 5px #4F9FE9;
+}
+
+.globalMain > .website li > .site .logo{
+    width: 48px;
+    height: 48px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 20px; */
+}
+
+.globalMain > .website li > .site .logo > img{
+    width: 30px;
+    height: 30px;
+}
+
+.globalMain > .website li > .site .detail{
+    width: 180px;
+}
+
+.globalMain > .website li > .site .site-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.globalMain > .website li > .site .url{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.globalMain > .website li > .site .delete{
+    border: none;
+    background: #F25F5F;
+    padding: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.globalMain > .website li > .site:hover .delete{
+    opacity: 1;
+}
+
+/* 媒体查询，手机端按在元素上不显示删除 */
+@media (max-width:500px) {
+    *.globalMain > .website li > .site:hover .delete{
+        opacity: 0;
+    }
+    .delete{
+        opacity: 1 !important;
+    }
+}
+
+/* 主体end */
